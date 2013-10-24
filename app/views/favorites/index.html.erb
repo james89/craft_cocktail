@@ -1,3 +1,7 @@
-<h2>See all your favorites here</h2>
-<%= @user.favorites.each do |favorite| %>
+<h2>Favorite Cocktails</h2>
+<% @user_cocktails.each do |cocktail| %>
+  <%= cocktail.name  %><br>
+  <img src='<%= cocktail.photo_url %>'><br>
+  <%= cocktail.description %><br>
+  <%= cocktail.recipe %>
 <% end %>
