@@ -1,0 +1,42 @@
+<br>
+The user will be able to 'Thumbs Up' or 'Thumbs Down' a cocktail.<br><br>
+Thumbs Up -->if user, post to '/favorites', then refresh the page to generate another cocktail from DB and display new form<br>
+Thumbs Down --> refresh the page to generate another cocktail from DB and display new form
+<br><br><br><br>
+
+<!-- cocktail generating below -->
+
+<%= @cocktail.name %> <br>
+<img src='<%= @cocktail.photo_url %>'> <br>
+<%= @cocktail.description %> <br>
+<%= @cocktail.recipe %> <br>
+
+
+<!-- current user button functionality (thumbs up (would save to favorites) / down) here -->
+<% if current_user %>
+
+<!-- Thumbs Up -->
+  <%= form_for @favorite do |f| %>
+    <%= f.hidden_field :cocktail_id, value: @cocktail.id  %>
+    <%= f.submit "Thumbs Up" %>
+
+  <% end %>
+
+<!-- Thumbs Down -->
+  <%= form_tag('/favorites/new', method: :get) do %>
+    <%= submit_tag "Thumbs Down" %>
+  <% end %>
+
+
+<% else %>
+
+<!-- non-user button functionality here, need to find a way to refresh the page and not load the same cocktail -->
+
+  <button>Non-User Thumbs Up</button>
+  <button>Non-User Thumbs Down</button>
+
+<% end %>
+
+
+
+

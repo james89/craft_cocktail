@@ -4,6 +4,7 @@ class CreateFavoritesTable < ActiveRecord::Migration
       t.integer :cocktail_id
       t.integer :user_id
       t.timestamps
+    end
   end
 
   def down

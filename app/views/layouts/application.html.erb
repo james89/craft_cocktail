@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CraftcocktailApp</title>
+  <title>Craft Cocktail</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="header">
+    <%= link_to 'home', '/' %>
+    <% if current_user %>
+      <%= "  " %>
+      <%= link_to "#{current_user.email}", "/users/#{current_user.id}" %>
+      <%= " | " %>
+      <%= link_to 'logout', '/logout' %>
+    <% else %>
+      <%= "  " %>
+      <%= link_to 'signup', '/signup' %>
+      <%= " | " %>
+      <%= link_to 'login', '/login' %>
+      <%= " | " %>
+
+    <% end %>
+  </div>
+
 
 <%= yield %>
 
