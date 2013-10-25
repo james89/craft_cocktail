@@ -12,10 +12,15 @@ class FavoritesController < ApplicationController
     #display a random cocktail
     #generate a form for that cocktail
     # @user = User.find params[:user_id]
+
+    #if user clicks
     @cocktails_all = Cocktail.all
     @cocktail = @cocktails_all.sample
     @favorite = Favorite.new
   end
+
+
+
 
   def create
     #pulling in params of form here after user clicks submit

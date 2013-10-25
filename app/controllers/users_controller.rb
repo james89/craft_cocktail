@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to(login_path)
+      redirect_to('/')
     else
       binding.pry
       render :new

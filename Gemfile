@@ -6,6 +6,8 @@ gem 'rails', '3.2.14'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'geocoder'
+gem 'gmaps4rails', '1.5.6'
 
 group :development, :test do
   gem 'pry-rails'          # Causes rails console to open pry

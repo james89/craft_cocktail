@@ -1,4 +1,27 @@
-.header {
-  background-color: red;
+.drink {
+  width: 200px;
+
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+.logo img {
+  opacity: .6;
+}
+
+body {
+  min-height: 2000px;
+  padding-top: 10px;
+  background: url('http://www.wsllpaper.com/wp-content/uploads/2013/07/martini-cocktail-on-glass-hd-wallpaper.jpg') no-repeat center center fixed !important;
+  background-size: cover;
+}
+
+.satisfy {
+  font-family: 'Calligraffitti', cursive;
+  font-size: 75px;
+  font-weight: 800;
+  color: #F8F8FF;
 
 }

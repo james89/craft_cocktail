@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Dynalight|Playball|Satisfy|Calligraffitti' rel='stylesheet' type='text/css'>
+
   <title>Craft Cocktail</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag "style", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="header">
-    <%= link_to 'home', '/' %>
-    <% if current_user %>
-      <%= "  " %>
-      <%= link_to "#{current_user.email}", "/users/#{current_user.id}" %>
-      <%= " | " %>
-      <%= link_to 'logout', '/logout' %>
-    <% else %>
-      <%= "  " %>
-      <%= link_to 'signup', '/signup' %>
-      <%= " | " %>
-      <%= link_to 'login', '/login' %>
-      <%= " | " %>
-
-    <% end %>
-  </div>
 
 
+  <nav class="top-bar">
+    <!-- <div class="wrapper"> -->
+    <ul class="title-area">
+      <li class="name"></li>
+       <li class="toggle-topbar menu-icon"><a href="#"><span>Craft Cocktail</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="left">
+        <li><%= link_to 'HOME', '/' %></li>
+        <li class="divider"></li>
+        <% if current_user %>
+          <li><%= link_to "#{current_user.email}", "/users/#{current_user.id}" %></li>
+          <li class="divider"></li>
+          <li><%= link_to 'LOGOUT', '/logout' %></li>
+        <% else %>
+          <li><%= link_to 'SIGNUP', '/signup' %></li>
+          <li class="divider"></li>
+          <li><%= link_to 'LOGIN', '/login' %></li>
+        <% end %>
+      </ul>
+    </section>
+<!--   </div> --></nav>
+
+
+
+
+<div class="wrapper">
 <%= yield %>
+<%= yield :scripts %>
 
+</div>
 </body>
+</div>
 </html>

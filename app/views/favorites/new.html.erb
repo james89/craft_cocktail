@@ -1,7 +1,4 @@
-<br>
-The user will be able to 'Thumbs Up' or 'Thumbs Down' a cocktail.<br><br>
-Thumbs Up -->if user, post to '/favorites', then refresh the page to generate another cocktail from DB and display new form<br>
-Thumbs Down --> refresh the page to generate another cocktail from DB and display new form
+<h4>Save it to your favorites by voting it up</h4>
 <br><br><br><br>
 
 <!-- cocktail generating below -->
@@ -18,13 +15,13 @@ Thumbs Down --> refresh the page to generate another cocktail from DB and displa
 <!-- Thumbs Up -->
   <%= form_for @favorite do |f| %>
     <%= f.hidden_field :cocktail_id, value: @cocktail.id  %>
-    <%= f.submit "Thumbs Up" %>
+    <%= f.submit "Thumbs Up", class: "button" %>
 
   <% end %>
 
 <!-- Thumbs Down -->
   <%= form_tag('/favorites/new', method: :get) do %>
-    <%= submit_tag "Thumbs Down" %>
+    <%= submit_tag "Thumbs Down", class: "button" %>
   <% end %>
 
 

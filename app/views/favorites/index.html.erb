@@ -1,7 +1,19 @@
+
 <h2>Favorite Cocktails</h2>
+  <ul>
 <% @user_cocktails.each do |cocktail| %>
-  <%= cocktail.name  %><br>
-  <img src='<%= cocktail.photo_url %>'><br>
-  <%= cocktail.description %><br>
+<li>
+  <%= cocktail.name  %>
+</li>
+<li>
+  <img class="drink" src='<%= cocktail.photo_url %>'>
+</li>
+  <li>
+  <%= cocktail.description %>
+</li>
+<li>
   <%= cocktail.recipe %>
+</li>
 <% end %>
+</ul>
+

@@ -30,3 +30,7 @@ Cocktail.create(name: "El Presidente", description: "", recipe: "1.5 ounces rum,
 Cocktail.create(name: "Mai Tai", description: "", recipe: "2 ounces rum, 1 ounce lime juice, .5 ounce orange curacao, .5 ounce orgeat syrup, .25 ounce simple syrup", liquor: "Rum", photo_url: "http://www.esquire.com/cm/esquire/images/lO/MaiTai-004-de1.jpg")
 Cocktail.create(name: "Moscow Mule", description: "", recipe: ".5 ounce lime juice, 2 ounces vodka, 4 ounces ginger beer", liquor: "Vodka", photo_url: "http://www.esquire.com/cm/esquire/images/zL/MoscowMule-004-de1.jpg")
 Cocktail.create(name: "Whiskey Sour", description: "", recipe: "2 ounces whiskey (usually bourbon), 2/3 ounce lemon juice, 1 teaspoon sugar", liquor: "Whiskey", photo_url: "http://www.esquire.com/cm/esquire/images/cy/WhiskeySour-001-de1.jpg")
+
+
+Bar.create(name: "Dutch Kills", address: "27-24 Jackson Avenue, Queens, New York", bar_url: "http://dutchkillsbar.com/main/")
+Bar.create(name: "Clover Club", address: "210 Smith Street, Brooklyn, New York", bar_url: "http://www.cloverclubny.com/")
