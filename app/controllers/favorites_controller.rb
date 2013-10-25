@@ -1,3 +1,4 @@
+# require 'twilio-ruby'
 class FavoritesController < ApplicationController
 
   def index
@@ -32,6 +33,10 @@ class FavoritesController < ApplicationController
       favorite.cocktail_id = params[:favorite][:cocktail_id]
       favorite.user_id = current_user.id
       favorite.save
+
+      name = favorite.cocktail.name
+      recipe = favorite.cocktail.recipe
+      MyTwilio.text('', "#{name}" "#{recipe}")
 
     end
     redirect_to '/favorites/new'
