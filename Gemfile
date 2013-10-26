@@ -8,7 +8,7 @@ gem 'rails', '3.2.14'
 gem 'pg'
 gem 'geocoder'
 gem 'gmaps4rails', '1.5.6'
-# gem 'twilio-ruby'
+
 
 group :development, :test do
   gem 'pry-rails'          # Causes rails console to open pry

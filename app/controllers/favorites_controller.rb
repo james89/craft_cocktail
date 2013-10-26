@@ -1,4 +1,4 @@
-# require 'twilio-ruby'
+
 class FavoritesController < ApplicationController
 
   def index
